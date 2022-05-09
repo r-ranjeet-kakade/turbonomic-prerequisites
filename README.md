@@ -9,9 +9,13 @@ oc adm policy add-scc-to-group anyuid system:serviceaccounts:turbonomic
 
 # Setup the required roles, role-bindings and service account
 oc apply -f service_account.yaml -n turbonomic
+
 oc apply -f role.yaml -n turbonomic
+
 oc apply -f role_binding.yaml -n turbonomic
+
 oc apply -f cluster_role.yaml -n turbonomic
+
 oc apply -f cluster_role_binding.yaml -n turbonomic
 
 # Turbonomic Platform Operator
