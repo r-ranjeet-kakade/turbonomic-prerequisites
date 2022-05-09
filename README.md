@@ -1,5 +1,6 @@
 # turbonomic-prerequisites
 Prerequisites to configure your cluster namespace on your RedHat Openshift Console to install the Turbonomic platform Operator from the Operator Hub.
+Run the below commands on you Openshift CLI.
 
 # Create a new project namespace
 oc new-project turbonomic
