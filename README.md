@@ -8,15 +8,15 @@ oc new-project turbonomic
 oc adm policy add-scc-to-group anyuid system:serviceaccounts:turbonomic
 
 # Setup the required roles, role-bindings and service account
-oc apply -f service_account.yaml -n turbonomic
+oc apply -f https://raw.githubusercontent.com/r-ranjeet-kakade/turbonomic-prerequisites/main/service_account.yaml -n turbonomic
 
-oc apply -f role.yaml -n turbonomic
+oc apply -f https://raw.githubusercontent.com/r-ranjeet-kakade/turbonomic-prerequisites/main/role.yaml -n turbonomic
 
-oc apply -f role_binding.yaml -n turbonomic
+oc apply -f https://raw.githubusercontent.com/r-ranjeet-kakade/turbonomic-prerequisites/main/cluster_role_binding.yaml -n turbonomic
 
-oc apply -f cluster_role.yaml -n turbonomic
+oc apply -f https://raw.githubusercontent.com/r-ranjeet-kakade/turbonomic-prerequisites/main/cluster_role.yaml -n turbonomic
 
-oc apply -f cluster_role_binding.yaml -n turbonomic
+oc apply -f https://raw.githubusercontent.com/r-ranjeet-kakade/turbonomic-prerequisites/main/role_binding.yaml -n turbonomic
 
 # Turbonomic Platform Operator
 Install the Turbonomic Platform Operator from the OperatorHub and configure the XL-release by enabling the require targets.
