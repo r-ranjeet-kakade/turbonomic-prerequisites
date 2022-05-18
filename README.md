@@ -15,13 +15,17 @@ oc adm policy add-scc-to-group anyuid system:serviceaccounts:turbonomic
 ## Setup the required roles, role-bindings and service account in _turbonomic_ namespace
 ```console
 oc apply -f https://raw.githubusercontent.com/r-ranjeet-kakade/turbonomic-prerequisites/main/service_account.yaml -n turbonomic
-
+```
+```console
 oc apply -f https://raw.githubusercontent.com/r-ranjeet-kakade/turbonomic-prerequisites/main/role.yaml -n turbonomic
-
+```
+```console
 oc apply -f https://raw.githubusercontent.com/r-ranjeet-kakade/turbonomic-prerequisites/main/cluster_role_binding.yaml -n turbonomic
-
+```
+```console
 oc apply -f https://raw.githubusercontent.com/r-ranjeet-kakade/turbonomic-prerequisites/main/cluster_role.yaml -n turbonomic
-
+```
+```console
 oc apply -f https://raw.githubusercontent.com/r-ranjeet-kakade/turbonomic-prerequisites/main/role_binding.yaml -n turbonomic
 ```
 
